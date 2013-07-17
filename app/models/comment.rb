@@ -25,7 +25,13 @@ class Comment
   end
 
   def as_json(*opts)
-    {:id => id, :points => points, :body => body}
+    {
+      :id            => id,
+      :points        => points,
+      :body          => body,
+      :comment_count => comments.count,
+      :comments      => comments
+    }
   end
 
 end

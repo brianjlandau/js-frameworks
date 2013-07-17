@@ -118,11 +118,14 @@ describe Comment do
       subject = described_class.create!(:user => Factory(:user), :body => 'Hi there.')
 
       Factory(:vote, :target => subject)
+      comment = Factory(:comment, :parent => subject)
 
       subject.as_json.should == {
-        :id     => subject.id,
-        :points => 1,
-        :body   => 'Hi there.'
+        :id            => subject.id,
+        :points        => 1,
+        :body          => 'Hi there.',
+        :comment_count => 1,
+        :comments      => [comment]
       }
     end
   end
