@@ -18,20 +18,22 @@ describe "Articles", :type => :integration do
 
       expected = [
         {
-          :id => article_1.id,
-          :points => 1,
-          :title => 'One',
-          :url => 'http://example.org/one',
-          :created_at => '2013-01-01T00:00:00+00:00',
-          :updated_at => '2013-01-01T00:00:00+00:00'
+          :id            => article_1.id,
+          :points        => 1,
+          :title         => 'One',
+          :url           => 'http://example.org/one',
+          :created_at    => '2013-01-01T00:00:00+00:00',
+          :updated_at    => '2013-01-01T00:00:00+00:00',
+          :comment_count => 0
         },
         {
-          :id => article_2.id,
-          :points => 1,
-          :title => 'Two',
-          :url => 'http://example.org/two',
-          :created_at => '2013-01-01T00:00:00+00:00',
-          :updated_at => '2013-01-01T00:00:00+00:00'
+          :id            => article_2.id,
+          :points        => 1,
+          :title         => 'Two',
+          :url           => 'http://example.org/two',
+          :created_at    => '2013-01-01T00:00:00+00:00',
+          :updated_at    => '2013-01-01T00:00:00+00:00',
+          :comment_count => 0
         }
       ]
 
@@ -64,12 +66,13 @@ describe "Articles", :type => :integration do
       last_response.should have_api_status(:created)
       last_response.should have_response_body(
         {
-          :id         => Article.last.id,
-          :points     => 1,
-          :title      => 'One',
-          :url        => 'http://example.org',
-          :created_at => '2013-01-01T00:00:00+00:00',
-          :updated_at => '2013-01-01T00:00:00+00:00'
+          :id            => Article.last.id,
+          :points        => 1,
+          :title         => 'One',
+          :url           => 'http://example.org',
+          :created_at    => '2013-01-01T00:00:00+00:00',
+          :updated_at    => '2013-01-01T00:00:00+00:00',
+          :comment_count => 0
         })
     end
 
@@ -114,12 +117,13 @@ describe "Articles", :type => :integration do
       last_response.should have_api_status(:ok)
       last_response.should have_response_body(
         {
-          :id         => article.id,
-          :points     => 1,
-          :title      => 'One',
-          :url        => 'http://example.org/one',
-          :created_at => '2013-01-01T00:00:00+00:00',
-          :updated_at => '2013-01-01T00:00:00+00:00'
+          :id            => article.id,
+          :points        => 1,
+          :title         => 'One',
+          :url           => 'http://example.org/one',
+          :created_at    => '2013-01-01T00:00:00+00:00',
+          :updated_at    => '2013-01-01T00:00:00+00:00',
+          :comment_count => 0
         })
     end
   end
@@ -143,12 +147,13 @@ describe "Articles", :type => :integration do
       last_response.should have_api_status(:ok)
       last_response.should have_response_body([
         {
-          :id         => article_1.id,
-          :points     => 1,
-          :title      => 'Foo',
-          :url        => 'http://example.com',
-          :created_at => '2013-01-01T00:00:00+00:00',
-          :updated_at => '2013-01-01T00:00:00+00:00'
+          :id            => article_1.id,
+          :points        => 1,
+          :title         => 'Foo',
+          :url           => 'http://example.com',
+          :created_at    => '2013-01-01T00:00:00+00:00',
+          :updated_at    => '2013-01-01T00:00:00+00:00',
+          :comment_count => 0
         }])
     end
   end
@@ -171,12 +176,13 @@ describe "Articles", :type => :integration do
       last_response.should have_api_status(:ok)
       last_response.should have_response_body([
         {
-          :id         => article_1.id,
-          :points     => 1,
-          :title      => 'Foo',
-          :url        => 'http://example.com',
-          :created_at => '2013-01-01T00:00:00+00:00',
-          :updated_at => '2013-01-01T00:00:00+00:00'
+          :id            => article_1.id,
+          :points        => 1,
+          :title         => 'Foo',
+          :url           => 'http://example.com',
+          :created_at    => '2013-01-01T00:00:00+00:00',
+          :updated_at    => '2013-01-01T00:00:00+00:00',
+          :comment_count => 0
         }])
     end
   end

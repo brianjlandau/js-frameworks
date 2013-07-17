@@ -98,12 +98,13 @@ describe Article do
                         :url   => 'http://example.org')
 
       subject.as_json.should == {
-        :id         => subject.id,
-        :points     => 1,
-        :title      => 'A new article',
-        :url        => 'http://example.org',
-        :created_at => '2013-01-01T00:00:00+00:00',
-        :updated_at => '2013-01-01T00:00:00+00:00'
+        :id            => subject.id,
+        :points        => 1,
+        :title         => 'A new article',
+        :url           => 'http://example.org',
+        :created_at    => '2013-01-01T00:00:00+00:00',
+        :updated_at    => '2013-01-01T00:00:00+00:00',
+        :comment_count => 0
       }
     end
   end

@@ -26,12 +26,13 @@ class Article
 
   def as_json(*opts)
     {
-      :id         => id,
-      :points     => points,
-      :title      => title,
-      :url        => url.to_s,
-      :created_at => created_at.to_s,
-      :updated_at => updated_at.to_s
+      :id            => id,
+      :points        => points,
+      :title         => title,
+      :url           => url.to_s,
+      :created_at    => created_at.to_s,
+      :updated_at    => updated_at.to_s,
+      :comment_count => comments.count
     }
   end
 

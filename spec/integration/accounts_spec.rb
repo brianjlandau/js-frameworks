@@ -181,12 +181,13 @@ describe "Accounts", :type => :integration do
       last_response.should have_api_status(:ok)
       last_response.should have_response_body([
         {
-          :id         => article.id,
-          :points     => 2,
-          :title      => 'Foo',
-          :url        => 'http://example.com/foo',
-          :created_at => '2013-01-01T00:00:00+00:00',
-          :updated_at => '2013-01-01T00:00:00+00:00'
+          :id            => article.id,
+          :points        => 2,
+          :title         => 'Foo',
+          :url           => 'http://example.com/foo',
+          :created_at    => '2013-01-01T00:00:00+00:00',
+          :updated_at    => '2013-01-01T00:00:00+00:00',
+          :comment_count => 0
         }])
     end
   end
